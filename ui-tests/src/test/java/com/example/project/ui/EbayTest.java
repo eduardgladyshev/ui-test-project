@@ -20,7 +20,7 @@ public class EbayTest {
     public void searchForSelenide() {
         // Arrange
         open("https://ebay.com/");
-        new SearchMenu().simpleSearch("korg electribe 2");
+        new SearchMenu().simpleSearch("korg");
         Results results = new Results();
 
         results.sortDropdown.shouldHave(text("по наилучшему соответствию"));

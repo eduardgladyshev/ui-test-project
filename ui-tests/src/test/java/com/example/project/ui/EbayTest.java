@@ -26,9 +26,9 @@ public class EbayTest {
         results.sortDropdown.shouldHave(text("по наилучшему соответствию"));
         results.sortDropdown.hover();
         results.sortList.shouldBe(visible);
-
         results.resultList.shouldHaveSize(50);
-
-
+        results.resultCountDropdown.scrollTo();
+        results.changeResultsCount("100");
+        results.resultList.shouldHaveSize(100);
     }
 }
